@@ -33,6 +33,7 @@ RECAPTCHA_PRIVATE_KEY = setting_secret.reCapSecret
 # Application definition
 
 INSTALLED_APPS = [
+    'homepage.apps.HomepageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
