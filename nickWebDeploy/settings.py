@@ -27,7 +27,7 @@ SECRET_KEY = setting_secret.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nick-web-deploy.qw3u8ccn4t.us-west-2.elasticbeanstalk.com","localhost","nickhooverdata.com"]
+ALLOWED_HOSTS = ["nick-web-deploy.qw3u8ccn4t.us-west-2.elasticbeanstalk.com","localhost","www.nickhooverdata.com"]
 RECAPTCHA_PUBLIC_KEY = '6Le5sFkUAAAAACDYM4MQ-104-80v9HK2i-9VXoE4'
 RECAPTCHA_PRIVATE_KEY = setting_secret.reCapSecret
 # Application definition
