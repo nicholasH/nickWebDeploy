@@ -1,5 +1,7 @@
 {% extends "homepage/base.html" %}
 {% block content %}
+{% load static %}
+
 
 <body>
 
@@ -18,27 +20,22 @@
 </div>
 
 <div class="about" id="about">
-    <p>I am a graduate of Hope College with a degree in Computer Science and minor in Physics. I have loved science from
-        childhood and want to apply my computer skills during a summer internship.
+
+    <center>
+    <div class="me-div">
+        <img src="{% static "homepage/images/ME.jpeg" %}" alt="ME"/>
+    </div>
+
+
+            <p>
+        My name is Nicholas Hoover. I'm a programmer and Portland resident.
+        I Try to learn a new skill with every project I do. I made this website to show off my project and body of work
+        and to carve out a little bit of the internet to call my own.
     <p>
-    <p>Last summer I worked at a medical device company in greater Chicago. I developed Labview software that automated
-        the testing of medical pumps. I enjoyed the job very much but my parents moved to Portland, Oregon so I am
-        looking for something that would allow me to live at home.
-    <p>
 
-    <p>My interest in programming started in elementary school when I took a class on how to write software to create
-        computer games. I also have a keen interest in robotics that was sparked by completing a LEGO mindstorms
-        class.</p>
 
-    <p>I have done some cellular phone testing during high school. I tried to find areas where automated testing would
-        catch failures. I operated the testing and recorded the failure rates.</p>
+    </center>
 
-    <p>I am creative and enjoy doing home projects. I have created a Halloween costume with wearable LED glasses. I
-        enjoyed all aspects, from soldering to working out the circuit design. </p>
-
-    <p>I am a detailed oriented problem solver and good team player. I get a kick out of solving technical problems. I
-        enjoy digging into the core of technology and using that knowledge to solve problems and come up with new
-        applications.</p>
 
 
 </div>
@@ -52,28 +49,70 @@
 
     </div>
 
+    <div class="portfolio-content-DD">
+        <div>
+            <img src="{% static "homepage/images/roll20_analyzer.png" %}" alt="PDX_CODEGUILD"/>
+
+        </div>
+        <div>
+
+            <p>
+                The D&D analyzer started as a project to teach myself Python as well as make a tool for me and my
+                friends. I learned a lot from this project, I build it from the ground up and had to overcome a lot of
+                challenges to get the application how I wanted to be. Python is a great language, I got very proficient
+                with as I work on the D&D Analyzer.  I posted it to several D&D enthusiasts forms and got a lot of
+                positive feedback. I listened to the community and made improvements to my program to fulfill suggested
+                requirements.
+                You can take a look at on my git hub <a href="https://github.com/nicholasH/roll20Analyzer">here</a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+        <div class="portfolio-content-CG">
+        <div>
+            <img src="{% static "homepage/images/pdx_code_guild_logo25.png" %}" alt="PDX_CODEGUILD"/>
+
+        </div>
+        <div>
+
+            <p>
+                Code guild host open coding nights where people can come in and work on their projects.
+                I help people with their projects and get work done on mine. I sometimes volunteer to lead and conduct
+                the meeting. It's a fun place I goto every week to work and talked about my code.
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
 
 </div>
 
 <div class=contact id="contact">
     <div>
-
+        <form action="#contact" method="post">
+            {% csrf_token %}
         <p class="title ">contact me</p>
         <hr size="60">
 
-        <form action="#contact" method="post">
-            {% csrf_token %}
-
-
             <div class="form-group row">
                 {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <div class="alert alert-info" role="alert" {% if message.tags %} class="{{ message.tags }}"{% endif %} >
-        <font color="black"> {{ message }}</font></div>
-    {% endfor %}
-</ul>
-{% endif %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <div class="alert alert-info" role="alert" {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                        <font color="black"> {{ message }}</font></div>
+                    {% endfor %}
+                </ul>
+                {% endif %}
                 <label for="InputEmail1">Email address</label>
 
                 <div class="col-xs-10">
@@ -83,37 +122,43 @@
             <div class="form-group row">
                 <label for="InputName">Name (Optional)</label>
                 <div class="col-xs-10">
-                    <input class="form-control" type="text" id="name-text-input"  name="contact_name" value="">
+                    <input class="form-control" type="text" id="name-text-input" name="contact_name" value="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="InputNompany">Company (Optional)</label>
                 <div class="col-xs-10">
-                    <input class="form-control" type="text" id="company-text-input"  name="company" value="">
+                    <input class="form-control" type="text" id="company-text-input" name="company" value="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="InputPhone">Phone Number (Optional)</label>
                 <div class="col-xs-10">
-                    <input class="form-control" type="number" id="Phone-number-input"  name="phone_number" value="">
+                    <input class="form-control" type="number" id="Phone-number-input" name="phone_number" value="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="InputMessage">Message</label>
                 <div class="col-xs-10">
-                    <textarea class="form-control" id="message-text-input" rows="3" name="message" value="" required></textarea>
+                    <textarea class="form-control" id="message-text-input" rows="3" name="message" value=""
+                              required></textarea>
                 </div>
-                <div class="form-group row">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-
-
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
+
+            <div class="form-group row">
+                <div class="col-xs-10">
+
+
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" name="captcha"
+                         data-sitekey="6LfM41MUAAAAAI7I1-zRFtzSX--FZS_FaQ8rI3oU"></div>
+                </div>
+            </div>
+
+
         </form>
     </div>
-
-
-
 
 
     <div class=links>

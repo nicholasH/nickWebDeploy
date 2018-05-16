@@ -34,6 +34,7 @@ RECAPTCHA_PRIVATE_KEY = setting_secret.reCapSecret
 
 INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
+    "captcha",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
