@@ -1,0 +1,52 @@
+{% extends "steam_match/base.html" %}
+{% block content %}
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Matcher</title>
+</head>
+<body>
+
+
+<p>matcher</p>
+
+<div class=steamPlayerForm id="steamPlayerForm">
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+        <p class="title ">Input Steam Friends</p>
+        <hr size="60">
+
+            <div class="form-group row">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <div class="alert alert-info" role="alert" {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                        <font color="black"> {{ message }}</font></div>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            <div class="form-group row">
+                <label for="InputMessage">Steam ID</label>
+                <div class="col-xs-10">
+                    <textarea class="form-control" id="message-text-input" rows="3" name="steamProfileID" value="" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+<div class="GameInfo">
+
+</div>
+
+
+
+
+</body>
+{% endblock %}

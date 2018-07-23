@@ -22,6 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = setting_secret.SECRET_KEY
+STEAM_KEY = setting_secret.steamSecret
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -33,6 +34,7 @@ RECAPTCHA_PRIVATE_KEY = setting_secret.reCapSecret
 # Application definition
 
 INSTALLED_APPS = [
+    'steam_match.apps.SteamMatchConfig',
     'homepage.apps.HomepageConfig',
     "captcha",
     'django.contrib.admin',
