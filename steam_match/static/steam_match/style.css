@@ -5,3 +5,20 @@ html,body
     background-color: #121212;
 
 }
+.btn {
+    padding: 10px 16px;
+    cursor: pointer;
+
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+    background-color: #666;
+    color: white;
+}
+
+.friendDiv{
+    border-style: solid;
+    border-color: lightBlue;
+
+}

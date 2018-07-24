@@ -19,12 +19,6 @@ def getFriends(id):
     return friendIDlist
 
 
-def getFriendInfo(id):
-    url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
-    params = {'key': settings.STEAM_KEY, 'steamids': id}
-    r = requests.get(url, params=params)
-    friendsListJson = r.json()
-
 def getFriendsInfo(ids):
     idsStn = ",".join(ids)
     url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
@@ -34,6 +28,15 @@ def getFriendsInfo(ids):
     infoList = friendsInfoListJson["response"]["players"]
     return infoList
 
+def getFriendsInfoBySteamID(id):
+    return getFriendsInfo(getFriends(id))
+
+def getUserGames(ID):
+    url = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?'
+    params = {'key': settings.STEAM_KEY, 'steamid': id}
+    r = requests.get(url, params=params)
+    gamesList = r.json()
 
 
-getFriendsInfo(getFriends("76561197993827038"))
+
+

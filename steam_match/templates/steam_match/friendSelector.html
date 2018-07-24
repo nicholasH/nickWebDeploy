@@ -1,0 +1,28 @@
+{% extends "steam_match/base.html" %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Selector</title>
+</head>
+<body>
+
+<div class="friendDiv" id = "friendDiv">
+{% for info in playerInfos %}
+    <div class="btn">
+        <img src={{ info.avatarfull }} class="img-responsive" >
+        <p>{{info.personaname}}</p>
+    </div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+</body>
+<script src={% static "steam_match/friendSelector.js" %} type="text/javascript"></script>
+
+{% endblock %}

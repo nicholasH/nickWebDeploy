@@ -1,4 +1,6 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import resolve
 
 from steam_match import services
 
@@ -10,9 +12,21 @@ def matcher(request):
         print(request.POST.get("steamProfileID"))
 
         ID = request.POST.get("steamProfileID")
-        data = services.getFriends(ID)
-        print(data)
+
+        return HttpResponseRedirect(ID)
+
+    else:
+        return render(request, template_name)
 
 
-    return render(request,template_name)
+def friendSelector(request, steam_id):
+    template_name = 'steam_match/friendSelector.html'
+    print(steam_id)
+    data = services.getFriendsInfoBySteamID(int(steam_id))
+
+    if request.method == 'POST':
+
+
+    return render(request, template_name, {"playerInfos": data})
+
 
