@@ -16,8 +16,7 @@
     <div class="btn">
         <img src={{ info.avatarfull }} class="img-responsive" >
         <p>{{info.personaname}}</p>
-        <p>{{info.steamid}}</p>
-        <input class="selectFriend" name="selectFriend" type="checkbox" id= {{ info.steamid }} value={{ info.steamid }} />
+        <input class="selectFriend" name="selectFriend" type="checkbox" id= {{ info.steamid }} value={{ info.steamid }} style="display: none;" />
     </div>
 
 
@@ -27,6 +26,17 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<div class="commonGamesDiv" id = "commonGamesDiv">
+{% for game in commonGames %}
+    <div class="btn">
+        <img src={{ game.header_image }} class="img-responsive" >
+        <p>{{game.name}}</p>
+    </div>
+
+
+{% endfor %}
+
+</div>
 
 
 

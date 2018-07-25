@@ -23,12 +23,18 @@ def friendSelector(request, steam_id):
     template_name = 'steam_match/friendSelector.html'
     print(steam_id)
     data = services.getFriendsInfoBySteamID(int(steam_id))
-    print(data)
+
     if request.method == 'POST':
         IDs = request.POST.getlist("selectFriend")
+        games = services.getCommonGamesInfo(steam_id,IDs)
+
         print(IDs)
+        print(games)
+        return render(request, template_name, {"playerInfos": data, "commonGames": games})
+    else:
+        return render(request, template_name, {"playerInfos": data})
 
 
-    return render(request, template_name, {"playerInfos": data})
+
 
 

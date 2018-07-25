@@ -35,34 +35,54 @@ def getFriendsInfo(ids):
 def getFriendsInfoBySteamID(id):
     return getFriendsInfo(getFriends(id))
 
-def getUserGames(ID):
+def getUserGames(id):
     url = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?'
     params = {'key': settings.STEAM_KEY, 'steamid': id}
     r = requests.get(url, params=params)
     gamesList = r.json()
     games = gamesList["response"]["games"]
+    turnList = []
+    for game in games:
+        turnList.append(game["appid"])
+    return turnList
 
 
-def getCommonGames(IDs):
+def getCommonGames(user,IDs):
     url = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?'
-    gamelist = []
-    for id in IDs:
 
+    userList = set(getUserGames(user))
+
+    for id in IDs:
+        glist = []
         params = {'key': settings.STEAM_KEY, 'steamid': id}
         r = requests.get(url, params=params)
         gamesList = r.json()
         games = gamesList["response"]["games"]
 
         for game in games:
+            glist.append(game["appid"])
+        userList = userList.intersection(glist)
 
-            gamelist.append(game["appid"])
+    return userList
 
+def getGamesInfo(games):
+    url = 'https://store.steampowered.com/api/appdetails?'
+    gameList = []
+    for game in games:
+        params = {'appids': game}
+        r = requests.get(url, params=params)
+        gameInfo = r.json()
+        x = gameInfo[str(game)].get("data")
+        if x is not None:
+            gameList.append(x)
 
+    return  gameList
 
-    pass
+def getCommonGamesInfo(user,IDs):
+    return getGamesInfo(getCommonGames(user, IDs))
 
 
 #getFriendsInfoBySteamID("76561197993827038")
-
-test = ['76561198053222544','76561197993827038']
-getCommonGames(test)
+t = "76561197993827038"
+test = ['76561198043377156']
+getCommonGamesInfo(t,test)
