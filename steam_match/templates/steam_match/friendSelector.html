@@ -13,10 +13,13 @@
 
 <div class="friendDiv" id = "friendDiv">
 {% for info in playerInfos %}
-    <div class="btn" id = {{ info.steamid }}>
+    <div class="btn">
         <img src={{ info.avatarfull }} class="img-responsive" >
         <p>{{info.personaname}}</p>
+        <p>{{info.steamid}}</p>
+        <input class="selectFriend" name="selectFriend" type="checkbox" id= {{ info.steamid }} value={{ info.steamid }} />
     </div>
+
 
 {% endfor %}
 
