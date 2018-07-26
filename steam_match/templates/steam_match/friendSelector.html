@@ -26,11 +26,37 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<div class="selecedFriend" id = "selecedFriend">
+{% for friend in selectedFriends %}
+    <div class="btn friend">
+        <img src={{ friend.avatarfull }} class="img-responsive" >
+        <p>{{friend.personaname}}</p>
+    </div>
+
+
+{% endfor %}
+
+</div>
+
+<div class="getMult">
+
+    <button onclick="getMuti()" class="btn btn-primary">getMult</button>
+</div>
+
 <div class="commonGamesDiv" id = "commonGamesDiv">
 {% for game in commonGames %}
-    <div class="btn">
+    <div class="btn game">
         <img src={{ game.header_image }} class="img-responsive" >
         <p>{{game.name}}</p>
+        <div class="GameMeta" style="display: none;">
+
+            {% for cat in game.categories %}
+            <p class="catID">{{cat.id}}</p>
+            <p class="catDis">{{cat.description}}</p>
+            {% endfor %}
+
+        </div>
+
     </div>
 
 
