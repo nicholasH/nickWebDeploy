@@ -45,7 +45,7 @@ function showCoOp(){
     var games = header.getElementsByClassName("game");
 
     for(var i = 0; i < games.length; i++){
-        var isMulti = false
+        var isCoOp = false
 
         var meta = games[i].getElementsByClassName("GameMeta")
         var ids = meta[0].getElementsByClassName("catID")
@@ -55,18 +55,19 @@ function showCoOp(){
 
                 //if not in list
                 if ('38' === id.textContent) {
-                    isMulti = true
+                    isCoOp = true
 
                 }
             }
 
 
-        if(!isMulti){
-            console.log(games[i])
-            games[i].style = "display: none;"
+        if(!isCoOp){
+            games[i].classList.remove("show");
+            games[i].classList.add("hidden");
         }
         else{
-            games[i].style = "display: inline-block;"
+            games[i].classList.remove("hidden");
+            games[i].classList.add("show");
         }
 
      }
@@ -118,21 +119,18 @@ function getRandom(){
 
     var shownGames =[]
     for(var i = 0; i < games.length; i++){
-         console.log(games[i].style)
         if(games[i].classList.contains("show")){
 
 
             shownGames.push(games[i])
 
         }
-
-
      }
      while (randomDiv.firstChild) {
         randomDiv.removeChild(randomDiv.firstChild);
      }
-
-     randomDiv.appendChild(shownGames[Math.floor(Math.random() * shownGames.length +1)])
+     var gameDiv = shownGames[Math.floor(Math.random() * shownGames.length)]
+     randomDiv.appendChild(gameDiv.cloneNode(true))
 }
 
 //todo make it so I just need to sent the page the appID and the page get the page info later.

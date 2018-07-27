@@ -35,6 +35,7 @@ def getFriendsInfo(ids):
 def getFriendsInfoBySteamID(id):
     return getFriendsInfo(getFriends(id))
 
+#todo make sure thing dont chrash when no one is selected
 def getUserGames(id):
     url = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?'
     params = {'key': settings.STEAM_KEY, 'steamid': id}
