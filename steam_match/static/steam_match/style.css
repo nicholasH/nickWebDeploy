@@ -23,3 +23,14 @@ html,body
     border-color: lightBlue;
 
 }
+
+.show{
+    display: inline-block;
+
+}
+
+.hidden{
+    display: none;
+
+
+}

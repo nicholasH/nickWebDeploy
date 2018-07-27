@@ -38,14 +38,20 @@
 
 </div>
 
-<div class="getMult">
-
+<div class="limmitGames">
+    <button onclick="getRandom()" class="btn btn-primary">getRandomGame</button>
     <button onclick="getMuti()" class="btn btn-primary">getMult</button>
+</div>
+
+<div class="randomGame" id="randomGame">
+
+
+
 </div>
 
 <div class="commonGamesDiv" id = "commonGamesDiv">
 {% for game in commonGames %}
-    <div class="btn game">
+    <div class="btn game" style="display: inline-block;">
         <img src={{ game.header_image }} class="img-responsive" >
         <p>{{game.name}}</p>
         <div class="GameMeta" style="display: none;">

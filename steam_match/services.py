@@ -82,34 +82,14 @@ def getGamesInfo(games):
 
     return  gameList
 
-def getOnlineGamesInfo(games):
-    url = 'https://store.steampowered.com/api/appdetails?'
-    gameList = []
-    for game in games:
-        params = {'appids': game}
-        r = requests.get(url, params=params)
-        gameInfo = r.json()
-        x = gameInfo[str(game)].get("data")
-        if x is not None:
-            for y in x["categories"]:
-                if y["id"] is 1 or 20 or 36 or 38:
-                    gameList.append(x)
-
-
-
-
-
-    return gameList
 
 
 def getCommonGamesInfo(user,IDs):
     return getGamesInfo(getCommonGames(user, IDs))
 
-def getCommonOnlineGamesInfo(user,IDs):
-    return getOnlineGamesInfo(getCommonGames(user, IDs))
+
 
 
 #getFriendsInfoBySteamID("76561197993827038")
 t = "76561197993827038"
 test = ['76561198067123311', '76561198071982180', '76561197999136248', '76561198053222544']
-getCommonOnlineGamesInfo(t,test)
