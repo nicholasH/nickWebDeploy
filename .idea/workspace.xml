@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5319ad9f-5d1f-453f-a131-ea24e293bfdb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam_match/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/steam_match/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam_match/static/steam_match/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/steam_match/static/steam_match/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" afterDir="false" />
-    </list>
+    <list default="true" id="5319ad9f-5d1f-453f-a131-ea24e293bfdb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+              <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -354,8 +348,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1855" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27439353" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -747,7 +740,7 @@
     <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+          <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
         </state>
       </provider>
     </entry>
