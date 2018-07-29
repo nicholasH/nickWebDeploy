@@ -11,10 +11,14 @@ def getFriends(id):
     params = {'key': settings.STEAM_KEY, 'steamid': id,"relationship":"friend"}
     r = requests.get(url, params=params)
     friendsListJson = r.json()
+    friendIDlist=[]
+
+
+    if len(friendsListJson) == 0:
+        return friendIDlist
 
     friendslist = friendsListJson["friendslist"]["friends"]
 
-    friendIDlist=[]
     for friend in friendslist:
         friendIDlist.append(friend["steamid"])
 
@@ -90,6 +94,8 @@ def getCommonGamesInfo(user,IDs):
 
 
 
+vaas = "76561198053222544"
+tecvdsf = getFriendsInfo(getFriends(vaas))
 
 #getFriendsInfoBySteamID("76561197993827038")
 t = "76561197993827038"
