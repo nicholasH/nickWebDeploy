@@ -32,8 +32,8 @@ function showAll(){
 
     for(var i = 0; i < games.length; i++){
 
-        games[i].style = "display: inline-block;"
-
+        games[i].classList.remove("hidden");
+        games[i].classList.add("show");
      }
 
 
@@ -66,8 +66,7 @@ function showCoOp(){
             games[i].classList.add("hidden");
         }
         else{
-            games[i].classList.remove("hidden");
-            games[i].classList.add("show");
+
         }
 
      }
@@ -133,43 +132,7 @@ function getRandom(){
      randomDiv.appendChild(gameDiv.cloneNode(true))
 }
 
-//todo make it so I just need to sent the page the appID and the page get the page info later.
 
-var header = document.getElementById("commonGamesDiv");
-var games = header.getElementsByClassName("game");
-var steamURL = 'https://store.steampowered.com/api/appdetails?appids='
-
-for(var i = 0; i < games.length; i++){
-    var game, obj, dbParam, xmlhttp, myObj, x, gib, txt = ""
-
-    game = games[i]
-    steamId = game.id
-    console.log(steamId)
-
-    steamURL = 'https://store.steampowered.com/api/appdetails?appids=' + steamId
-    gib = 'https://ghibliapi.herokuapp.com/films'
-    test = "https://steam.cmandersen.com/categories"
-
-    var request = new XMLHttpRequest();
-    //request.open('GET', gib, true);
-    request.open('GET', test, true);
-
-    request.onload = function () {
-
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.response);
-  if (request.status >= 200 && request.status < 400) {
-      console.log(data)
-  } else {
-    console.log("Not working")
-  }
-}
-
-request.send();
-
-
-
-}
 
 
 

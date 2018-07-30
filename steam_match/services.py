@@ -1,7 +1,10 @@
+import time
+
 import requests
 import json
 from operator import itemgetter
 
+from requests.exceptions import ConnectionError
 
 from nickWebDeploy import settings
 
@@ -11,15 +14,20 @@ def getFriends(id):
     params = {'key': settings.STEAM_KEY, 'steamid': id,"relationship":"friend"}
     r = requests.get(url, params=params)
     friendsListJson = r.json()
+    friendIDlist=[]
+
+
+    if len(friendsListJson) == 0:
+        return friendIDlist
 
     friendslist = friendsListJson["friendslist"]["friends"]
 
-    friendIDlist=[]
     for friend in friendslist:
         friendIDlist.append(friend["steamid"])
 
     return friendIDlist
 
+#todo make it so if a user has more then 100 friends this method get all of them
 def getFriendsInfo(ids):
     idsStn = ",".join(ids)
     url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
@@ -71,23 +79,45 @@ def getCommonGames(user,IDs):
 
 
 def getGamesInfo(games):
-    url = 'https://store.steampowered.com/api/appdetails?'
+    url = 'https://store.steampowered.com/api/appdetails/basic?'
     gameList = []
-    for game in games:
-        params = {'appids': game}
-        r = requests.get(url, params=params)
-        gameInfo = r.json()
-        x = gameInfo[str(game)].get("data")
-        if x is not None:
-            gameList.append(x)
+    ok = True
 
-    return  gameList
+    for game in games:
+        params = {'key': settings.STEAM_KEY,'appids': game}
+        try:
+            r = requests.get(url, params=params)
+        except ConnectionError as e:
+            print(e)
+            ok = False
+            continue
+        print(r)
+        if r.status_code == 200:
+            gameInfo = r.json()
+            x = gameInfo[str(game)].get("data")
+
+            if x is not None:
+                gameList.append(x)
+        elif r.status_code == 403:
+            ok = False
+            return [gameList,ok]
+        else:
+            ok = False
+
+
+    return  [gameList,ok]
 
 
 
 def getCommonGamesInfo(user,IDs):
     return getGamesInfo(getCommonGames(user, IDs))
 
+
+
+what = "76561197993827038"
+vaas = "76561198053222544"
+
+#print(getCommonGamesInfo(what,[]))
 
 
 

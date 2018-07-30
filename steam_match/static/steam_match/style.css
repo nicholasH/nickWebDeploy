@@ -3,7 +3,7 @@ html,body
    font-size: 1em ;
    color: lightBlue;
     background-color: #121212;
-
+    margin: 10 auto;
 }
 .btn {
     padding: 10px 16px;
@@ -12,16 +12,28 @@ html,body
 }
 
 
-/* Style the active class, and buttons on mouse-over */
-.active, .btn:hover {
+.active{
+    background-color: lightGreen !important;
+    color: black !important;
+}
+
+.btn:hover {
     background-color: #666;
     color: white;
 }
 
+
+
 .friendDiv{
     border-style: solid;
     border-color: lightBlue;
+    text-align:center;
 
+
+}
+.selecedFriend{
+    width: 50%;
+    margin: 0 auto;
 }
 
 .show{
@@ -32,5 +44,30 @@ html,body
 .hidden{
     display: none;
 
+}
+
+
+.commonGamesDiv{
+    display: flex;
+    flex-wrap:  wrap ;
+
+
+
+}
+.game{
+    padding: 10px 16px;
+
+}
+.getRanGame{
+    padding: 30px;
+
+}
+.randomGame{
+
+     display: inline-block;
+     padding: 50px;
+
+}
+.sub{
 
 }

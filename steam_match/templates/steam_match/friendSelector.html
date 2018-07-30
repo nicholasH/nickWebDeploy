@@ -8,25 +8,46 @@
 </head>
 <body>
 
+<div class="warning">
+    {% if status %}
+        <div class="waning message">
+            <p>The resultes are shown are incomplete ether because too many
+                results or too many requests to the server
+            </p>
+        </div>
+    {% endif %}
+
+
+</div>
+
 <form action="" method="post">
     {% csrf_token %}
-
+<h3>Choose the friends you want to play with</h3>
 <div class="friendDiv" id = "friendDiv">
+    {% if playerInfos|length > 1%}
 {% for info in playerInfos %}
     <div class="btn">
         <img src={{ info.avatarfull }} class="img-responsive" >
         <p>{{info.personaname}}</p>
         <input class="selectFriend" name="selectFriend" type="checkbox" id= {{ info.steamid }} value={{ info.steamid }} style="display: none;" />
     </div>
+    {% endfor %}
+
+    {% else %}
+        <div>
+            <h1>Your steam profile my be set to private</h1>
+        </div>
+{% endif %}
 
 
-{% endfor %}
-
+<button type="submit" class="sub btn btn-primary">Submit</button>
 </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>
 
 <div class="selecedFriend" id = "selecedFriend">
+    <h3>Showing game in common for these friends:<h3>
+    {% if playerInfos|length > 1 %}
 {% for friend in selectedFriends %}
     <div class="btn friend">
         <img src={{ friend.avatarfull }} class="img-responsive" >
@@ -36,23 +57,38 @@
 
 {% endfor %}
 
+    {% else %}
+            <div>
+            <h1>showing your all your Steam Games</h1>
+        </div>
+    {% endif %}
+
 </div>
 
 <div class="limmitGames">
-    <button onclick="getRandom()" class="btn btn-primary">getRandomGame</button>
-    <button onclick="getMuti()" class="btn btn-primary">getMult</button>
-    <button onclick="showCoOp()" class="btn btn-primary">showCoOp</button>
-</div>
 
-<div class="randomGame" id="randomGame">
-
-
+    <button onclick="getMuti()" class="btn btn-primary">Show Mult</button>
+    <button onclick="showCoOp()" class="btn btn-primary">Show CoOp</button>
+    <button onclick="showAll()" class="btn btn-primary">Show All</button>
+    <button onclick="getRandom()" class="ranbtn btn btn-primary">Choose Random game</button>
 
 </div>
 
+<div class="getRanGame">
+    <div class="randomGame" id="randomGame">
+
+
+
+    </div>
+</div>
+
+
+
+<hr>
 <div class="commonGamesDiv" id = "commonGamesDiv">
+    
 {% for game in commonGames %}
-    <div class="btn game show">
+    <div class="game show">
         <img src={{ game.header_image }} class="img-responsive" >
         <p>{{game.name}}</p>
         <div class="GameMeta" style="display: none;">
