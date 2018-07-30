@@ -186,6 +186,7 @@
         <option value="$PROJECT_DIR$/nickWebDeploy/settings.py" />
         <option value="$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js" />
         <option value="$PROJECT_DIR$/steam_match/static/steam_match/style.css" />
+        <option value="$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js" />
         <option value="$PROJECT_DIR$/steam_match/services.py" />
         <option value="$PROJECT_DIR$/steam_match/views.py" />
         <option value="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" />
@@ -392,12 +393,22 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989521" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27385443" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32934132" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989521" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294025" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32990506" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -760,7 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html">
+    <entry file="file://$PROJECT_DIR$/steam_match/services.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
