@@ -9,10 +9,32 @@
 </head>
 <body>
 
+<div class="warning">
+    {% if "urlNotFound" in errors  %}
 
-<p>matcher</p>
+        <div>
+            <p>The url you submitted was not found your profile my be set to private. Make sure your URL is correct and
+                try again
+            </p>
+        </div>
+    {% elif "IdNotFound" in errors %}
+
+
+    <div>
+        <p>The ID you submitted was not found . Make sure your ID is correct and try again
+        </p>
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+
+
 
 <div class=steamPlayerForm id="steamPlayerForm">
+    <h1>Steam Friend Game Match</h1>
     <div>
         <form action="" method="post">
             {% csrf_token %}

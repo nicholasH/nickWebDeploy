@@ -7,14 +7,35 @@ from steam_match import services
 
 def matcher(request):
     template_name = 'steam_match/matcher.html'
-
+    errors = []
     if request.method == 'POST':
 
-        print(request.POST.get("steamProfileID"))
+        if "ID" in request.POST:
+            print("ID was pressed")
+            ID = request.POST.get("steamProfileID")
+            if ID == "":
+                return render(request, template_name)
+            else:
+                if services.getUserExists(ID):
+                    return HttpResponseRedirect(ID)
+                else:
+                    errors.append("IdNotFound")
+                    return render(request, template_name,{"errors":errors})
 
-        ID = request.POST.get("steamProfileID")
+        elif "URL" in request.POST:
+            print("URL was pressed")
+            URL = request.POST.get("steamProfileURL")
+            if URL == "":
+                return render(request, template_name)
+            else:
+                ID = services.getSteamByURl(URL)
 
-        return HttpResponseRedirect(ID)
+                if ID is "":
+                    errors.append("urlNotFound")
+                    return render(request, template_name,{"errors":errors})
+                else:
+                    return HttpResponseRedirect(ID)
+
 
     else:
         return render(request, template_name)

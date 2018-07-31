@@ -112,11 +112,37 @@ def getGamesInfo(games):
 def getCommonGamesInfo(user,IDs):
     return getGamesInfo(getCommonGames(user, IDs))
 
+def getSteamByURl(vanityURL):
+    url = 'https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?'
+    params = {'key': settings.STEAM_KEY, 'vanityurl': vanityURL}
+    r = requests.get(url, params=params)
+    steamID = r.json()["response"].get("steamid")
+
+    if steamID is not None:
+        return steamID
+    else:
+        return ""
+
+def getUserExists(id):
+    url = 'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
+    params = {'key': settings.STEAM_KEY, 'steamids': id}
+    r = requests.get(url, params=params)
+    players = r.json()["response"].get("players")
+
+    if len(players) > 0:
+        return True
+    else:
+        return False
+
+
 
 
 what = "76561197993827038"
 vaas = "76561198053222544"
 
+ac = "AnAngelCried"
+
+#test = getSteamByURl(ac)
 #print(getCommonGamesInfo(what,[]))
 
 
