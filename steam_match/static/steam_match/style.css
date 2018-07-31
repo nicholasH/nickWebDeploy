@@ -68,6 +68,21 @@ html,body
      padding: 50px;
 
 }
+.warning
+{
+    text-align:center;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    background:red;
+    color: black;
+
+}
+
 .sub{
+    text-align:center;
+    width: 100%;
+
 
 }

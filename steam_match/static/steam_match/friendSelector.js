@@ -24,7 +24,12 @@ for (var i = 0; i < btns.length; i++) {
 
   });
 }
+var friDiv = document.getElementById("selecedFriend");
 
+if(friDiv != null){
+    friDiv.scrollIntoView()
+
+}
 
 function showAll(){
     var header = document.getElementById("commonGamesDiv");
@@ -36,6 +41,13 @@ function showAll(){
         games[i].classList.add("show");
      }
 
+
+}
+
+function showRan(){
+    var ranDiv = document.getElementById("getRanGame");
+    ranDiv.classList.remove("hidden");
+    ranDiv.classList.add("show");
 
 }
 
@@ -111,6 +123,7 @@ function getMuti() {
 }
 
 function getRandom(){
+    showRan();
     var header = document.getElementById("commonGamesDiv");
     var games = header.getElementsByClassName("game");
     var randomDiv = document.getElementById("randomGame");
@@ -131,6 +144,12 @@ function getRandom(){
      var gameDiv = shownGames[Math.floor(Math.random() * shownGames.length)]
      randomDiv.appendChild(gameDiv.cloneNode(true))
 }
+function loading(form)
+  {
+
+    form.submit.disabled = true;
+    form.submit.innerHTML = "Please wait...";
+  }
 
 
 

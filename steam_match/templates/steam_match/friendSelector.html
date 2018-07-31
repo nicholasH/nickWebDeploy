@@ -9,8 +9,9 @@
 <body>
 
 <div class="warning">
-    {% if status %}
-        <div class="waning message">
+    {% if not status %}
+
+        <div class=".">
             <p>The resultes are shown are incomplete ether because too many
                 results or too many requests to the server
             </p>
@@ -20,11 +21,11 @@
 
 </div>
 
-<form action="" method="post">
+<form action="" method="post" onsubmit="return loading(this);">
     {% csrf_token %}
 <h3>Choose the friends you want to play with</h3>
 <div class="friendDiv" id = "friendDiv">
-    {% if playerInfos|length > 1%}
+    {% if playerInfos|length > 0%}
 {% for info in playerInfos %}
     <div class="btn">
         <img src={{ info.avatarfull }} class="img-responsive" >
@@ -40,14 +41,26 @@
 {% endif %}
 
 
-<button type="submit" class="sub btn btn-primary">Submit</button>
 </div>
+    <button type="submit" class="sub btn btn-primary" name="submit" >Submit</button>
+
 
 </form>
 
+{% if selectedFriends == None %}
+
+
+    {% else %}
 <div class="selecedFriend" id = "selecedFriend">
-    <h3>Showing game in common for these friends:<h3>
-    {% if playerInfos|length > 1 %}
+
+
+    {% if selectedFriends|length > 0 %}
+    <h3>Showing game in common for these friends:</h3>
+        {% else %}
+
+        <h3>showing your all your Steam Games</h3>
+
+        {% endif %}
 {% for friend in selectedFriends %}
     <div class="btn friend">
         <img src={{ friend.avatarfull }} class="img-responsive" >
@@ -56,29 +69,21 @@
 
 
 {% endfor %}
-
-    {% else %}
-            <div>
-            <h1>showing your all your Steam Games</h1>
         </div>
+
     {% endif %}
 
-</div>
 
 <div class="limmitGames">
-
+    <button onclick="showAll()" class="btn btn-primary">Show All</button>
     <button onclick="getMuti()" class="btn btn-primary">Show Mult</button>
     <button onclick="showCoOp()" class="btn btn-primary">Show CoOp</button>
-    <button onclick="showAll()" class="btn btn-primary">Show All</button>
     <button onclick="getRandom()" class="ranbtn btn btn-primary">Choose Random game</button>
 
 </div>
 
-<div class="getRanGame">
+<div class="getRanGame hidden" id="getRanGame">
     <div class="randomGame" id="randomGame">
-
-
-
     </div>
 </div>
 
