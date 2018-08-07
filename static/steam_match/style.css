@@ -89,3 +89,8 @@ html,body
 .steamPlayerForm{
     text-align:center;
 }
+
+.noCommon{
+    width: 50%;
+    margin: 0 auto;
+}
