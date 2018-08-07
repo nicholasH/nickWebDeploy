@@ -161,21 +161,3 @@ def getUserExists(id):
     else:
         return False
 
-
-
-
-what = "76561197993827038"
-vaas = "76561198053222544"
-
-ac = "AnAngelCried"
-
-onehundred = "76561198059808087"
-
-#test = getSteamByURl(ac)
-#print(getCommonGamesInfo(what,[]))
-
-
-
-#getFriendsInfoBySteamID(onehundred)
-t = "76561197993827038"
-test = ['76561198067123311', '76561198071982180', '76561197999136248', '76561198053222544']
