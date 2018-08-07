@@ -29,28 +29,48 @@ def getFriends(id):
 
 #todo make it so if a user has more then 100 friends this method get all of them
 def getFriendsInfo(ids):
-    idsStn = ",".join(ids)
-    url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
-    params = {'key': settings.STEAM_KEY, 'steamids': idsStn}
-    r = requests.get(url, params=params)
-    friendsInfoListJson = r.json()
-    infoList = friendsInfoListJson["response"]["players"]
+    turnlist = []
+    if len(ids) > 100:
+        chunks = [ids[x:x + 100] for x in range(0, len(ids), 100)]
 
-    turnlist = sorted(infoList, key=itemgetter('personaname'))
+        for chunk in chunks:
+            idsStn = ",".join(chunk)
+            url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
+            params = {'key': settings.STEAM_KEY, 'steamids': idsStn}
+            r = requests.get(url, params=params)
+            friendsInfoListJson = r.json()
+            infoList = friendsInfoListJson["response"]["players"]
+
+            turnlist.extend(sorted(infoList, key=itemgetter('personaname')))
+
+
+
+
+    else:
+        idsStn = ",".join(ids)
+        url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?'
+        params = {'key': settings.STEAM_KEY, 'steamids': idsStn}
+        r = requests.get(url, params=params)
+        friendsInfoListJson = r.json()
+        infoList = friendsInfoListJson["response"]["players"]
+
+        turnlist.extend(sorted(infoList, key=itemgetter('personaname')))
 
     return turnlist
 
 def getFriendsInfoBySteamID(id):
     return getFriendsInfo(getFriends(id))
 
-#todo make sure thing dont chrash when no one is selected
 def getUserGames(id):
     url = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?'
     params = {'key': settings.STEAM_KEY, 'steamid': id}
     r = requests.get(url, params=params)
     gamesList = r.json()
-    games = gamesList["response"]["games"]
+    print(r.url)
+    games = gamesList["response"].get("games")
     turnList = []
+    if games is None:
+        return turnList
     for game in games:
         turnList.append(game["appid"])
     return turnList
@@ -82,6 +102,7 @@ def getGamesInfo(games):
     url = 'https://store.steampowered.com/api/appdetails/basic?'
     gameList = []
     ok = True
+    count429 = 0
 
     for game in games:
         params = {'key': settings.STEAM_KEY,'appids': game}
@@ -93,6 +114,7 @@ def getGamesInfo(games):
             continue
         print(r)
         if r.status_code == 200:
+            count429 = 0
             gameInfo = r.json()
             x = gameInfo[str(game)].get("data")
 
@@ -101,6 +123,11 @@ def getGamesInfo(games):
         elif r.status_code == 403:
             ok = False
             return [gameList,ok]
+        elif r.status_code == 429:
+            count429+=1
+            if count429 >10:
+                ok = False
+                return [gameList, ok]
         else:
             ok = False
 
@@ -142,11 +169,13 @@ vaas = "76561198053222544"
 
 ac = "AnAngelCried"
 
+onehundred = "76561198059808087"
+
 #test = getSteamByURl(ac)
 #print(getCommonGamesInfo(what,[]))
 
 
 
-#getFriendsInfoBySteamID("76561197993827038")
+#getFriendsInfoBySteamID(onehundred)
 t = "76561197993827038"
 test = ['76561198067123311', '76561198071982180', '76561197999136248', '76561198053222544']
