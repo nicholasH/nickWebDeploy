@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5319ad9f-5d1f-453f-a131-ea24e293bfdb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/static/steam_match/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/steam_match/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/porfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/porfolio.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +26,7 @@
       <file leaf-file-name="matcher.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam_match/templates/steam_match/matcher.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="855">
               <caret line="57" column="71" selection-start-line="57" selection-start-column="71" selection-end-line="57" selection-end-column="71" />
             </state>
           </provider>
@@ -35,8 +35,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam_match/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="645">
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friendSelector.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="friendSelector.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
+            <state relative-caret-position="990">
+              <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -56,28 +56,24 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1234">
+            <state relative-caret-position="1380">
               <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="porfolio.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="porfolio.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/porfolio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="104" selection-start-line="104" selection-end-line="109" selection-end-column="74" />
+            <state relative-caret-position="-735">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nickWebDeploy/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-            </state>
-          </provider>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
@@ -92,8 +88,8 @@
       <file leaf-file-name="friendSelector.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+            <state relative-caret-position="1005">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -101,8 +97,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nickWebDeploy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="240">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#314#323#0" expanded="true" />
               </folding>
@@ -158,17 +154,17 @@
         <option value="$PROJECT_DIR$/nickWebDeploy/setting_secret.py" />
         <option value="$PROJECT_DIR$/static/homepage/style.css" />
         <option value="$PROJECT_DIR$/homepage/static/homepage/style.css" />
-        <option value="$PROJECT_DIR$/homepage/templates/homepage/porfolio.html" />
         <option value="$PROJECT_DIR$/steam_match/templates/steam_match/matcher.html" />
         <option value="$PROJECT_DIR$/steam_match/static/steam_match/style.css" />
         <option value="$PROJECT_DIR$/steam_match/services.py" />
         <option value="$PROJECT_DIR$/nickWebDeploy/settings.py" />
         <option value="$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html" />
+        <option value="$PROJECT_DIR$/homepage/templates/homepage/porfolio.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
+    <option name="x" value="2624" />
     <option name="y" value="-11" />
     <option name="width" value="2497" />
     <option name="height" value="1452" />
@@ -179,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,19 +191,6 @@
               <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
               <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
               <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -222,47 +204,12 @@
               <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
               <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
               <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nickWebDeploy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nickWebDeploy" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="steam_match" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +301,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="2497" height="1452" extended-state="6" />
+    <frame x="2624" y="-11" width="2497" height="1452" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2737475" />
@@ -366,7 +313,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3989521" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989521" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -409,13 +356,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homepage/static/homepage/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="904">
@@ -681,33 +621,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/porfolio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="104" selection-start-line="104" selection-end-line="109" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steam_match/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/friendSelector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+        <state relative-caret-position="1005">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steam_match/static/steam_match/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1234">
+        <state relative-caret-position="1380">
           <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
         </state>
       </provider>
@@ -721,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nickWebDeploy/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="240">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#314#323#0" expanded="true" />
           </folding>
@@ -731,15 +654,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/steam_match/templates/steam_match/matcher.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="855">
           <caret line="57" column="71" selection-start-line="57" selection-start-column="71" selection-end-line="57" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steam_match/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steam_match/templates/steam_match/friendSelector.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
+        <state relative-caret-position="990">
+          <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/porfolio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-735">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
